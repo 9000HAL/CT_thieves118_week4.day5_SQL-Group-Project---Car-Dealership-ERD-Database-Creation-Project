@@ -6,8 +6,8 @@
 CREATE TABLE customers (
     customer_id SERIAL PRIMARY KEY,
     full_name VARCHAR,
-    email VARCHAR
-    --FOREIGN KEY (invoice_id) REFERENCES invoice(invoice_id),
+    email VARCHAR,
+    FOREIGN KEY (invoice_id) REFERENCES invoice(invoice_id)
 
 );
 
@@ -15,7 +15,8 @@ CREATE TABLE customers (
 --CREATE salesperson
 CREATE TABLE salesperson (
     salesperson_id SERIAL PRIMARY KEY,
-    salesperson_name VARCHAR
+    salesperson_name VARCHAR,
+    FOREIGN KEY (invoice_id) REFERENCES invoice(invoice_id)
 
 );
 
