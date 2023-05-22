@@ -24,6 +24,7 @@ CREATE TABLE salesperson (
 
 );
 
+
 --CREATE service_ticket table
 CREATE TABLE service_ticket (
     service_ticket_id SERIAL PRIMARY KEY,
@@ -100,7 +101,6 @@ CREATE TABLE services (
     price VARCHAR
 
 );
-
 
 
 
