@@ -30,8 +30,35 @@ CREATE TABLE service_ticket (
     FOREIGN KEY (invoice_id) REFERENCES invoice(invoice_id),
     FOREIGN KEY (mechanic_id) REFERENCES invoice(mechanic_id),
     FOREIGN KEY (service_id) REFERENCES invoice(service_id),
-    FOREIGN KEY (customer_car_id) REFERENCES invoice(customer_car_id),
+    FOREIGN KEY (customer_car_id) REFERENCES invoice(customer_car_id)
+
+);
 
 
-)
+--CREATE the car table
+CREATE TABLE car (
+    car_id SERIAL PRIMARY KEY,
+    car_info VARCHAR,
+    year INTEGER,
+    make INTEGER,
+    model INTEGER
+
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
