@@ -72,7 +72,27 @@ CREATE TABLE customer_car (
     car_vin VARCHAR,
     year INTEGER,
     make VARCHAR,
-    MODEL VARCHAR
+    model VARCHAR
+
+);
+
+
+--CREATE the service_history table
+CREATE TABLE service_history (
+    service_history_id SERIAL PRIMARY KEY,
+    customer_id INTEGER REFERENCES customer(customer_id),
+    mechanic_id INTEGER REFERENCES mechanic(mechanic_id),
+    service_history_desc VARCHAR,
+    service_id INTEGER REFERENCES services(service_id)
+
+);
+
+
+--CREATE the services table
+CREATE TABLE services (
+    services_id SERIAL PRIMARY KEY,
+    service_info VARCHAR(150),
+    price VARCHAR
 
 );
 
