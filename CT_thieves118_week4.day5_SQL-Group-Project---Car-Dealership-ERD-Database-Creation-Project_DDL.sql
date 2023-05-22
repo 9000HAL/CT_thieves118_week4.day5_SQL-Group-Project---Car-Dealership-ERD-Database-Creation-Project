@@ -2,6 +2,10 @@
 --DROP TABLE customers;
 
 
+--Create SQL database
+CREATE DATABASE GabeDealershipHW;
+
+
 --CREATE customers table
 CREATE TABLE customers (
     customer_id SERIAL PRIMARY KEY,
