@@ -46,9 +46,35 @@ CREATE TABLE car (
 );
 
 
+--CREATE the INVOICE table
+CREATE TABLE invoice (
+    invoice_id SERIAL PRIMARY KEY,
+    customer_id INTEGER REFERENCES customer(customer_id),
+    salesperson_id INTEGER REFERENCES salesperson(salesperson_id),
+    amount_paid VARCHAR,
+    car_id INTEGER REFERENCES car(car_id)
+
+);
 
 
+--CREATE the MECHANIC table
+CREATE TABLE mechanic (
+    mechanic_id SERIAL PRIMARY KEY,
+    service_ticket_id INTEGER REFERENCES service_ticket(service_ticket_id),
+    mechanic_name VARCHAR
 
+);
+
+
+--CREATE the customer_car table
+CREATE TABLE customer_car (
+    customer_car_id SERIAL PRIMARY KEY,
+    car_vin VARCHAR,
+    year INTEGER,
+    make VARCHAR,
+    MODEL VARCHAR
+
+);
 
 
 
